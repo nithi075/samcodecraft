@@ -1,0 +1,229 @@
+.noise_embed-footer::before {
+  content: "";
+  position: absolute;
+  opacity: 0.04;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('https://cdn.prod.website-files.com/677fb4d34764579513f06df6/678a4ca6053fb371ef1a243a_pf_noise.png');
+  pointer-events: none;
+  animation: 0.4s infinite noise;
+  mix-blend-mode: overlay;
+}
+
+* {
+  -webkit-font-smoothing: antialiased;  
+  -moz-osx-font-smoothing: grayscale;   
+}  
+
+html { font-size: calc(0.4375rem + 0.625vw); } 
+@media screen and (min-width: 1800px) { 
+  html { font-size: 1.125rem; }  /* 16px for screens larger than 1600px */
+}/* 16px at 1440px */
+@media screen and (min-width: 1600px) { 
+  html { font-size: 1vw; }  /* 16px for screens larger than 1600px */
+}
+
+@media screen and (min-width: 1800px) { 
+  html { font-size: 1.125rem; }  /* 16px for screens larger than 1600px */
+}
+
+@media screen and (max-width: 992px) { 
+  html { font-size: 1rem; }  /* 16px for screens smaller than 960px */
+}
+@media screen and (max-width: 479px) { 
+  html { font-size: 1rem; }  /* 16px for screens smaller than 479px */
+}  
+
+a {
+ 		color: inherit;
+    text-decoration:none;
+}
+
+.w-select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+[class*="svg-icon"] svg { width: 100% !important; height: 100% !important; }
+[class*="svg-icon"] * { fill: currentColor !important; }       
+
+body:has([data-cursor]:hover) .cursor { 
+  opacity: 1;
+}
+
+/* Remove default placeholder background color */
+input::placeholder, 
+textarea::placeholder {
+    background-color: transparent !important;
+    color: inherit;
+}
+
+@media (min-width: 992px) {
+
+  /* Footer Links Hover */
+  .footer_social-link:hover .social-link-tag {
+    transform: scale(1) translateY(0em);
+    opacity: 1;
+  }
+
+  .footer_social-link:hover {
+    border-color: rgba(23, 23, 23, 0.48);
+  }
+
+  .footer_social-link {
+    transition: border-color 0.3s cubic-bezier(.16, 1, .3, 1.15);
+  }
+
+  .footer_next-overlay {
+    transition: transform 0.5s cubic-bezier(.16, 1, .3, 1);
+  }
+
+  .footer_next .footer_next-overlay {
+    transform: scaleY(0);
+  }
+
+  .footer_next:hover .footer_next-overlay {
+    transform: scaleY(1);
+  }
+
+  .footer_next .footer_next-title-w {
+    transition: transform 0.4s cubic-bezier(.16, 1, .3, 1);
+  }
+
+  .footer_next:hover .footer_next-title-w {
+    transform: translateX(1em);
+  }
+
+  .footer_callout:hover .footer_callout-hover-w {
+    margin-left: 2.5em;
+  }
+
+  .footer_callout .footer_next-overlay {
+    transform: scaleY(0);
+  }
+
+  .footer_callout:hover .footer_next-overlay {
+    transform: scaleY(1);
+  }
+
+  .footer_callout-hover-w {
+    transition: margin-left 0.5s cubic-bezier(.16, 1, .3, 1);
+  }
+
+  /* CSS for Footer Links */
+  .footer_social-link .social-link-tag {
+    transform: scale(0.4) translateY(2em);
+    opacity: 0;
+    transition:
+      transform 0.3s cubic-bezier(.16, 1, .3, 1.15),
+      opacity 0.3s cubic-bezier(.16, 1, .3, 1);
+  }
+
+  /* Footer & Menu Links Hover */
+  .menu_link:hover~.menu_link:not(:hover),
+  .menu_link:not(:hover):has(~ .menu_link:hover) {
+    opacity: 0.4;
+  }
+
+  .footer_link:hover~.footer_link:not(:hover),
+  .footer_link:not(:hover):has(~ .footer_link:hover) {
+    opacity: 0.4;
+  }
+
+  /* Contact Form Hover Styles */
+  .field_input {
+    text-decoration: none;
+    transition: 0.2s border-color ease;
+  }
+
+  .field_input:hover {
+    border-color: rgba(250, 250, 250, 0.24);
+  }
+
+  .field_radio-button {
+    transition: 0.2s border-color ease;
+  }
+
+  .field_radio-button:hover {
+    border-color: rgba(250, 250, 250, 0.24);
+  }
+
+  .field_radio-button .txt-color-light-60o {
+    transition: 0.2s color ease;
+  }
+
+  .field_radio-button:hover .txt-color-light-60o {
+    color: var(--light--main);
+  }
+
+  .contact_close-btn {
+    transition: 0.2s border-color ease;
+  }
+
+  .contact_close-btn .icon_embed20 {
+    transition: 0.3s opacity ease;
+  }
+
+  .contact_close-btn:hover {
+    border-color: rgba(250, 250, 250, 0.24);
+  }
+
+  .contact_close-btn:hover .icon_embed20 {
+    opacity: 0.6;
+  }
+}
+
+/* Text logo: SAM CODE CRAFT */
+.menu_logo-link { justify-content: flex-start; width: auto; gap: .7em; }
+.menu_logo-badge { height: 3.25em; width: auto; flex: none; display: block; }
+.about-logo-svg, .footer_logo-svg { width: 100%; height: 100%; display: block; }
+@media screen and (max-width: 767px) { .menu_logo-text { display: none; } }
+.menu_logo-text {
+  font-family: var(--font--display);
+  font-style: italic;
+  text-transform: uppercase;
+  font-size: 1.15em;
+  line-height: 1;
+  letter-spacing: .01em;
+  white-space: nowrap;
+  color: var(--light--main);
+}
+@media screen and (max-width: 479px) {
+  .menu_logo-link { width: auto; }
+  .menu_logo-text { font-size: 1.25em; }
+}
+
+/* Featured works: keep each card 1/6 wide and centred when fewer than 6 projects */
+.h-hero_works-grid { justify-content: center; }
+.h-hero_work { flex: 0 1 calc(100% / 6); max-width: calc(100% / 6); }
+
+
+/* Project screenshots: fill the square frame (same as original work_card-img) */
+.work_card-img-w > img,
+.h-work_asset-c > img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Featured cards: name on top, type below (names are long with 6 cards in a row) */
+.h-hero_work .work_card-infos-hover {
+  flex-flow: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 0.15em;
+}
+.h-hero_work .work_label-hover {
+  text-align: left;
+  opacity: 0.6;
+}
+
+/* Featured card: frames crossfade like a slideshow while hovering */
+.work_card-frame {
+  transition: opacity 0.45s ease;
+}
